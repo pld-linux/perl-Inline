@@ -43,7 +43,8 @@ Modu³ Inline::C - pozwalaj±cy pisaæ funkcje Perla w C.
 %setup -q -n %{pdir}-%{version}
 
 %build
-echo "y" | perl Makefile.PL
+echo "y" | perl Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make}
 
 %install

@@ -3,7 +3,7 @@
 Summary:	Inline perl module
 Summary(pl):	Modu³ perla Inline
 Name:		perl-Inline
-Version:	0.42
+Version:	0.44
 Release:	1
 Epoch:		1
 License:	Artistic

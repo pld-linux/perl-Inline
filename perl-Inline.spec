@@ -9,6 +9,7 @@ Epoch:		1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+# Source0-md5:	840f47d9b6cef39e68370faf9dceab2c
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Parse-RecDescent >= 1.78

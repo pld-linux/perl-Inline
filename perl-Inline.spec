@@ -3,8 +3,9 @@
 Summary:	Inline perl module
 Summary(pl):	Modu³ perla Inline
 Name:		perl-Inline
-Version:	0.43
-Release:	3
+Version:	0.42
+Release:	1
+Epoch:		1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz

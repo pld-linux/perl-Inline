@@ -12,7 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Parse-RecDescent >= 1.78
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

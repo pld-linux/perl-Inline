@@ -4,7 +4,7 @@ Summary:	Inline perl module
 Summary(pl):	Modu³ perla Inline
 Name:		perl-Inline
 Version:	0.43
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
@@ -14,6 +14,9 @@ BuildRequires:	perl-Parse-RecDescent >= 1.78
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# false requires found by rpm
+%define		_noautoreq	'perl(of)'
 
 %description
 Inline.pm - Write Perl subroutines in other programming languages.

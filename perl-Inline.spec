@@ -31,7 +31,7 @@ programowania.
 Summary:	Inline::C perl module
 Summary(pl):	Modu³ perla Inline::C
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 Requires:	gcc
 
 %description C

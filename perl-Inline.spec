@@ -1,5 +1,5 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Inline
+%define		pdir	Inline
 Summary:	Inline perl module
 Summary(pl):	Modu³ perla Inline
 Name:		perl-Inline

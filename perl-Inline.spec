@@ -44,6 +44,7 @@ echo "y" | perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{perl_sitearch}{,/auto}/Inline
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -55,11 +56,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_sitelib}/Inline.pm
-%dir %{perl_sitelib}/Inline
 %{perl_sitelib}/Inline/denter.pm
 %{perl_sitelib}/Inline/Foo.pm
 %{perl_sitelib}/Inline/MakeMaker.pm
 %{perl_sitelib}/auto/Inline
+%dir %{perl_sitearch}/Inline
+%dir %{perl_sitearch}/auto/Inline
 %{_mandir}/man3/Inline.3pm*
 %{_mandir}/man3/Inline-*.3pm*
 

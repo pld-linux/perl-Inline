@@ -8,7 +8,7 @@ Release:	1
 Epoch:		1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Parse-RecDescent >= 1.78

@@ -6,7 +6,8 @@ Name:		perl-Inline
 Version:	0.44
 Release:	2
 Epoch:		1
-License:	Artistic
+# same as perl (but C-Cookbook is Artistic-only)
+License:	GPL v1+ (except C-Cookbook) or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	840f47d9b6cef39e68370faf9dceab2c
@@ -31,6 +32,7 @@ programowania.
 Summary:	Inline::C perl module
 Summary(pl):	Modu³ perla Inline::C
 Group:		Development/Languages/Perl
+License:	Artistic
 Requires:	%{name} = %{epoch}:%{version}
 Requires:	gcc
 

@@ -4,7 +4,7 @@ Summary:	Inline perl module
 Summary(pl):	Modu³ perla Inline
 Name:		perl-Inline
 Version:	0.44
-Release:	1
+Release:	2
 Epoch:		1
 License:	Artistic
 Group:		Development/Languages/Perl
@@ -12,7 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Parse-RecDescent >= 1.78
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,17 +58,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/Inline.pm
-%{perl_sitelib}/Inline/denter.pm
-%{perl_sitelib}/Inline/Foo.pm
-%{perl_sitelib}/Inline/MakeMaker.pm
-%{perl_sitelib}/auto/Inline
+%{perl_vendorlib}/Inline.pm
+%{perl_vendorlib}/Inline/denter.pm
+%{perl_vendorlib}/Inline/Foo.pm
+%{perl_vendorlib}/Inline/MakeMaker.pm
+%{perl_vendorlib}/auto/Inline
 %{_mandir}/man3/Inline.3pm*
 %{_mandir}/man3/Inline-*.3pm*
 
 %files C
 %defattr(644,root,root,755)
 %doc C/Changes C/README
-%{perl_sitelib}/Inline/C.pm
-%{perl_sitelib}/Inline/C
+%{perl_vendorlib}/Inline/C.pm
+%{perl_vendorlib}/Inline/C
 %{_mandir}/man3/Inline::C*.3pm*

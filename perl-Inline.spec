@@ -4,7 +4,7 @@ Summary:	Inline perl module
 Summary(pl):	Modu³ perla Inline
 Name:		perl-Inline
 Version:	0.43
-Release:	2
+Release:	3
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
@@ -47,7 +47,6 @@ echo "y" | perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{perl_sitearch}{,/auto}/Inline
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -63,8 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitelib}/Inline/Foo.pm
 %{perl_sitelib}/Inline/MakeMaker.pm
 %{perl_sitelib}/auto/Inline
-%dir %{perl_sitearch}/Inline
-%dir %{perl_sitearch}/auto/Inline
 %{_mandir}/man3/Inline.3pm*
 %{_mandir}/man3/Inline-*.3pm*
 

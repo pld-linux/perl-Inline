@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Inline
 Summary:	Inline perl module
-Summary(pl):	Modu³ perla Inline
+Summary(pl.UTF-8):   ModuÅ‚ perla Inline
 Name:		perl-Inline
 Version:	0.44
 Release:	2
@@ -24,13 +24,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Inline.pm - Write Perl subroutines in other programming languages.
 
-%description -l pl
-Modu³ Inline.pm - pozwala tworzyæ procedury Perla w innych jêzykach
+%description -l pl.UTF-8
+ModuÅ‚ Inline.pm - pozwala tworzyÄ‡ procedury Perla w innych jÄ™zykach
 programowania.
 
 %package C
 Summary:	Inline::C perl module
-Summary(pl):	Modu³ perla Inline::C
+Summary(pl.UTF-8):   ModuÅ‚ perla Inline::C
 Group:		Development/Languages/Perl
 License:	Artistic
 Requires:	%{name} = %{epoch}:%{version}
@@ -39,8 +39,8 @@ Requires:	gcc
 %description C
 Inline::C - Write Perl subroutines in C.
 
-%description C -l pl
-Modu³ Inline::C - pozwalaj±cy pisaæ funkcje Perla w C.
+%description C -l pl.UTF-8
+ModuÅ‚ Inline::C - pozwalajÄ…cy pisaÄ‡ funkcje Perla w C.
 
 %prep
 %setup -q -n %{pdir}-%{version}

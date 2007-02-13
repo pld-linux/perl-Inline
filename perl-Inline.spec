@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Inline
 Summary:	Inline perl module
-Summary(pl.UTF-8):   Moduł perla Inline
+Summary(pl.UTF-8):	Moduł perla Inline
 Name:		perl-Inline
 Version:	0.44
 Release:	2
@@ -30,7 +30,7 @@ programowania.
 
 %package C
 Summary:	Inline::C perl module
-Summary(pl.UTF-8):   Moduł perla Inline::C
+Summary(pl.UTF-8):	Moduł perla Inline::C
 Group:		Development/Languages/Perl
 License:	Artistic
 Requires:	%{name} = %{epoch}:%{version}

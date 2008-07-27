@@ -4,7 +4,7 @@ Summary:	Inline perl module
 Summary(pl.UTF-8):	Moduł perla Inline
 Name:		perl-Inline
 Version:	0.44
-Release:	2
+Release:	3
 Epoch:		1
 # same as perl (but C-Cookbook is Artistic-only)
 License:	GPL v1+ (except C-Cookbook) or Artistic

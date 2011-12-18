@@ -1,16 +1,17 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Inline
-Summary:	Inline perl module
-Summary(pl.UTF-8):	Moduł perla Inline
+Summary:	Inline Perl module - write Perl subroutines in other programming languages
+Summary(pl.UTF-8):	Moduł Perla Inline - tworzenie funkcji perlowych w innych językach programowania
 Name:		perl-Inline
-Version:	0.45
+Version:	0.49
 Release:	1
 Epoch:		1
 # same as perl (but C-Cookbook is Artistic-only)
 License:	GPL v1+ (except C-Cookbook) or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
-# Source0-md5:	63140a6c911f1576fdee71ba4457610f
+Source0:	http://www.cpan.org/modules/by-module/Inline/%{pdir}-%{version}.tar.gz
+# Source0-md5:	0deecdc161fed17c51cd29cd05190081
+URL:		http://search.cpan.org/dist/Inline/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Parse-RecDescent >= 1.78
@@ -22,25 +23,30 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	'perl(of)'
 
 %description
-Inline.pm - Write Perl subroutines in other programming languages.
+The Inline module allows you to put source code from other programming
+languages directly "inline" in a Perl script or module. The code is
+automatically compiled as needed, and then loaded for immediate access
+from Perl.
 
 %description -l pl.UTF-8
-Moduł Inline.pm - pozwala tworzyć procedury Perla w innych językach
-programowania.
+Moduł Inline pozwala umieszczać kod źródłowy w innych językach
+programowania bezpośrednio wewnątrz skryptu lub modułu perlowego. Kod
+jest w razie potrzeby automatycznie kompilowany, a następnie ładowany
+w celu bezpośredniego dostępu z poziomu Perla.
 
 %package C
-Summary:	Inline::C perl module
-Summary(pl.UTF-8):	Moduł perla Inline::C
+Summary:	Inline::C Perl module - write Perl subroutines in C
+Summary(pl.UTF-8):	Moduł Perla Inline::C - tworzenie funkcji Perla w C
 Group:		Development/Languages/Perl
 License:	Artistic
 Requires:	%{name} = %{epoch}:%{version}
 Requires:	gcc
 
 %description C
-Inline::C - Write Perl subroutines in C.
+Inline::C is a module that allows you to write Perl subroutines in C.
 
 %description C -l pl.UTF-8
-Moduł Inline::C - pozwalający pisać funkcje Perla w C.
+Inline::C to moduł pozwalający pisać funkcje Perla w C.
 
 %prep
 %setup -q -n %{pdir}-%{version}
@@ -55,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/*.pod \
+	$RPM_BUILD_ROOT%{perl_vendorlib}/Inline/*.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT

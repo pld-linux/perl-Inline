@@ -3,14 +3,14 @@
 Summary:	Inline Perl module - write Perl subroutines in other programming languages
 Summary(pl.UTF-8):	Moduł Perla Inline - tworzenie funkcji perlowych w innych językach programowania
 Name:		perl-Inline
-Version:	0.49
+Version:	0.50
 Release:	1
 Epoch:		1
 # same as perl (but C-Cookbook is Artistic-only)
 License:	GPL v1+ (except C-Cookbook) or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Inline/%{pdir}-%{version}.tar.gz
-# Source0-md5:	0deecdc161fed17c51cd29cd05190081
+# Source0-md5:	cb9377b494819924bddf2de20c90f3ab
 URL:		http://search.cpan.org/dist/Inline/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Digest-MD5 >= 2.09

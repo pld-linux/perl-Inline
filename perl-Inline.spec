@@ -14,7 +14,8 @@ Source0:	http://www.cpan.org/modules/by-module/Inline/%{pdir}-%{version}.tar.gz
 URL:		http://search.cpan.org/dist/Inline/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Digest-MD5 >= 2.09
-BuildRequires:	perl-Parse-RecDescent >= 1.78
+BuildRequires:	perl-Parse-RecDescent >= 1.80
+BuildRequires:	perl-Test-Warn >= 0.21
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

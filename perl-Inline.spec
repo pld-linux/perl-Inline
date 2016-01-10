@@ -3,25 +3,24 @@
 Summary:	Inline Perl module - write Perl subroutines in other programming languages
 Summary(pl.UTF-8):	Moduł Perla Inline - tworzenie funkcji perlowych w innych językach programowania
 Name:		perl-Inline
-Version:	0.50
+Version:	0.80
 Release:	1
 Epoch:		1
-# same as perl (but C-Cookbook is Artistic-only)
-License:	GPL v1+ (except C-Cookbook) or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Inline/%{pdir}-%{version}.tar.gz
-# Source0-md5:	cb9377b494819924bddf2de20c90f3ab
+# Source0-md5:	510bbac46e727bcaf240b7feac2646c9
 URL:		http://search.cpan.org/dist/Inline/
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.1
+BuildRequires:	perl(File::Spec) >= 0.8
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Parse-RecDescent >= 1.80
-BuildRequires:	perl-Test-Warn >= 0.21
+BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-Test-Warn >= 0.23
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-# false requires found by rpm
-%define		_noautoreq	'perl(of)'
 
 %description
 The Inline module allows you to put source code from other programming
@@ -35,22 +34,10 @@ programowania bezpośrednio wewnątrz skryptu lub modułu perlowego. Kod
 jest w razie potrzeby automatycznie kompilowany, a następnie ładowany
 w celu bezpośredniego dostępu z poziomu Perla.
 
-%package C
-Summary:	Inline::C Perl module - write Perl subroutines in C
-Summary(pl.UTF-8):	Moduł Perla Inline::C - tworzenie funkcji Perla w C
-Group:		Development/Languages/Perl
-License:	Artistic
-Requires:	%{name} = %{epoch}:%{version}
-Requires:	gcc
-
-%description C
-Inline::C is a module that allows you to write Perl subroutines in C.
-
-%description C -l pl.UTF-8
-Inline::C to moduł pozwalający pisać funkcje Perla w C.
-
 %prep
 %setup -q -n %{pdir}-%{version}
+
+%{__mv} lib/Inline/MakeMaker/Changes Changes.Inline_MakeMaker
 
 %build
 echo "y" | perl Makefile.PL \
@@ -71,18 +58,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes Changes.Inline_MakeMaker README
 %{perl_vendorlib}/Inline.pm
 %{perl_vendorlib}/Inline/denter.pm
 %{perl_vendorlib}/Inline/Foo.pm
 %{perl_vendorlib}/Inline/MakeMaker.pm
-%{perl_vendorlib}/auto/Inline
 %{_mandir}/man3/Inline.3pm*
-%{_mandir}/man3/Inline-*.3pm*
-
-%files C
-%defattr(644,root,root,755)
-%doc C/Changes C/README
-%{perl_vendorlib}/Inline/C.pm
-%{perl_vendorlib}/Inline/C
-%{_mandir}/man3/Inline::C*.3pm*
+%{_mandir}/man3/Inline::API.3pm*
+%{_mandir}/man3/Inline::FAQ.3pm*
+%{_mandir}/man3/Inline::Support.3pm*

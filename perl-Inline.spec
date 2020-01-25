@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Inline
 Summary:	Inline Perl module - write Perl subroutines in other programming languages
 Summary(pl.UTF-8):	Moduł Perla Inline - tworzenie funkcji perlowych w innych językach programowania
